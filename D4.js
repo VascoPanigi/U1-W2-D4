@@ -4,6 +4,10 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const area = function (l1, l2) {
+  return l1 * l2;
+};
+
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
  La funzione deve ritornare la somma dei due parametri, ma se il valore dei due parametri è il medesimo deve invece tornare
@@ -12,12 +16,31 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const crazySum = function (n1, n2) {
+  if (n1 === n2) {
+    return (n1 + n2) * 3;
+  } else {
+    return n1 + n2;
+  }
+};
+
+console.log(crazySum(2, 3));
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const crazyDiff = function (n3) {
+  if (crazyDiff > 19) {
+    return Math.abs(n3 - 19) * 3;
+  } else {
+    return Math.abs(n3 - 19);
+  }
+};
+
+console.log(crazyDiff(23));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -26,6 +49,12 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const boundary = function (n) {
+  return (n > 20 && n < 101) || n === 400;
+};
+
+console.log(boundary(100));
+
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
@@ -33,6 +62,19 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const epify = function (sentence) {
+  if (sentence.startsWith("EPICODE")) {
+    return sentence;
+  } else {
+    return "EPICODE " + sentence;
+  }
+};
+
+//both lines should log the same str value
+
+console.log(epify("è un career accellerator"));
+console.log(epify("EPICODE è un career accellerator"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
