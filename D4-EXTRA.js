@@ -116,6 +116,18 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
+const longest = function (stringsArray) {
+  let bigOne = stringsArray[0];
+
+  for (let i = 0; i < stringsArray.length; i++) {
+    if (stringsArray[i].length > bigOne.length) {
+      bigOne = stringsArray[i];
+    }
+  }
+  return bigOne;
+};
+
+console.log(longest("fiume petaloso panna zuzzurellone"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
