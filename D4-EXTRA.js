@@ -80,6 +80,19 @@ console.log(shoppingCartTotal());
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let mostExpensive = 0;
+
+const maxShoppingCart = function () {
+  for (let i = 0; i < shoppingCart.length; i++) {
+    if (shoppingCart[i].price > mostExpensive) {
+      mostExpensive = shoppingCart[i].price;
+    }
+  }
+  return mostExpensive;
+};
+maxShoppingCart();
+console.log(mostExpensive);
+
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
