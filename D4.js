@@ -83,11 +83,26 @@ console.log(epify("EPICODE è un career accellerator"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const check3and7 = function (n4) {
+  return n4 % 3 === 0 || n4 % 7 === 0;
+};
+
+console.log(check3and7(40));
+console.log(check3and7(39));
+console.log(check3and7(22));
+console.log(check3and7(21));
+
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const reverseString = function (reverseMe) {
+  return reverseMe.split("").reverse().join("");
+};
+
+console.log(reverseString("accellerator"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -96,6 +111,18 @@ console.log(epify("EPICODE è un career accellerator"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const upperFirst = function (randomSentence) {
+  let words = randomSentence.split(" ");
+
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1);
+  }
+
+  return words.join(" ");
+};
+
+console.log(upperFirst("EPICODE è un career accellerator"));
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -103,8 +130,26 @@ console.log(epify("EPICODE è un career accellerator"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const cutString = function (randomString) {
+  return randomString.slice(1, -1);
+};
+
+console.log(cutString("EPICODE è un career accellerator"));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const giveMeRandom = function (n5) {
+  let randomNumbersList = [];
+
+  for (let i = 0; i < n5; i++) {
+    randomNumbersList.push(Math.floor(Math.random() * 11));
+  }
+  return randomNumbersList;
+};
+
+console.log(giveMeRandom(9));
+console.log(giveMeRandom(23));
